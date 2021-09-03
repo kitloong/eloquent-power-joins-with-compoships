@@ -4,7 +4,7 @@ namespace KitLoong\PowerJoins\Tests\Models;
 
 use Awobaz\Compoships\Compoships;
 use Illuminate\Database\Eloquent\Model;
-use KitLoong\PowerJoins\PowerJoins;
+use Kirschbaum\PowerJoins\PowerJoins;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
 
 class Comment extends Model
