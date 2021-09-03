@@ -1,0 +1,47 @@
+{
+    "name": "kitloong/eloquent-power-joins-with-compoships",
+    "description": "The Laravel magic applied to joins, with compoships support",
+    "keywords": [
+        "laravel",
+        "eloquent",
+        "mysql",
+        "join"
+    ],
+    "license": "MIT",
+    "type": "library",
+    "authors": [
+        {
+            "name": "Kit Loong",
+            "email": "kitloong1008@gmail.com"
+        }
+    ],
+    "require": {
+        "kirschbaum-development/eloquent-power-joins": "^2.4",
+        "awobaz/compoships": "^2.1"
+    },
+    "require-dev": {
+        "orchestra/testbench": "4.*|5.*|6.*",
+        "phpunit/phpunit": "^8.0",
+        "laravel/legacy-factories": "^1.1",
+        "squizlabs/php_codesniffer": "^3.6"
+    },
+    "autoload": {
+        "psr-4": {
+            "KitLoong\\PowerJoins\\": "src"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "KitLoong\\PowerJoins\\Tests\\": "tests"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "KitLoong\\PowerJoins\\PowerJoinsServiceProvider"
+            ]
+        }
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true
+}
