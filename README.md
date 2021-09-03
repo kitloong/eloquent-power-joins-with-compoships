@@ -30,7 +30,7 @@ First, you need to define the model relationship the way Compoships did.
 
 ```php
 use Awobaz\Compoships\Compoships;
-use KitLoong\PowerJoins\PowerJoins;
+use Kirschbaum\PowerJoins\PowerJoins;
 
 class User extends Model
 {

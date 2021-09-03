@@ -3,7 +3,7 @@
 namespace KitLoong\PowerJoins\Tests\Models;
 
 use Awobaz\Compoships\Compoships;
-use KitLoong\PowerJoins\PowerJoins;
+use Kirschbaum\PowerJoins\PowerJoins;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\HasMany;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;

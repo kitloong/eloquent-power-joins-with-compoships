@@ -84,7 +84,7 @@ class OrderByTest extends TestCase
 
     /**
      * @test
-     * @covers \KitLoong\PowerJoins\PowerJoins::scopeOrderByPowerJoinsCount
+     * @covers \Kirschbaum\PowerJoins\PowerJoins::scopeOrderByPowerJoinsCount
      */
     public function test_order_by_relationship_count()
     {
@@ -105,7 +105,7 @@ class OrderByTest extends TestCase
 
     /**
      * @test
-     * @covers \KitLoong\PowerJoins\PowerJoins::scopeOrderByPowerJoinsSum
+     * @covers \Kirschbaum\PowerJoins\PowerJoins::scopeOrderByPowerJoinsSum
      */
     public function test_order_by_relationship_sum()
     {
@@ -127,7 +127,7 @@ class OrderByTest extends TestCase
 
     /**
      * @test
-     * @covers \KitLoong\PowerJoins\PowerJoins::scopeOrderByPowerJoinsAvg
+     * @covers \Kirschbaum\PowerJoins\PowerJoins::scopeOrderByPowerJoinsAvg
      */
     public function test_order_by_relationship_avg()
     {
@@ -149,8 +149,8 @@ class OrderByTest extends TestCase
 
     /**
      * @test
-     * @covers \KitLoong\PowerJoins\PowerJoins::scopeOrderByPowerJoinsMin
-     * @covers \KitLoong\PowerJoins\PowerJoins::scopeOrderByPowerJoinsMax
+     * @covers \Kirschbaum\PowerJoins\PowerJoins::scopeOrderByPowerJoinsMin
+     * @covers \Kirschbaum\PowerJoins\PowerJoins::scopeOrderByPowerJoinsMax
      */
     public function test_order_by_relationship_min_and_max()
     {

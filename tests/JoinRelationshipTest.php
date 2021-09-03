@@ -2,7 +2,7 @@
 
 namespace KitLoong\PowerJoins\Tests;
 
-use KitLoong\PowerJoins\PowerJoins;
+use Kirschbaum\PowerJoins\PowerJoins;
 use KitLoong\PowerJoins\Tests\Models\Post;
 use KitLoong\PowerJoins\Tests\Models\User;
 use KitLoong\PowerJoins\Tests\Models\Image;

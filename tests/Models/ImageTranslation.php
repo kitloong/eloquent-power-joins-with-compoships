@@ -3,7 +3,7 @@
 namespace KitLoong\PowerJoins\Tests\Models;
 
 use Illuminate\Database\Eloquent\Model;
-use KitLoong\PowerJoins\PowerJoins;
+use Kirschbaum\PowerJoins\PowerJoins;
 
 class ImageTranslation extends Model
 {

@@ -2,6 +2,7 @@
 
 namespace KitLoong\PowerJoins\Tests;
 
+use Kirschbaum\PowerJoins\PowerJoinsServiceProvider as BasePowerJoinsServiceProvider;
 use KitLoong\PowerJoins\PowerJoinsServiceProvider;
 
 class TestCase extends \Orchestra\Testbench\TestCase
@@ -16,7 +17,10 @@ class TestCase extends \Orchestra\Testbench\TestCase
 
     protected function getPackageProviders($app)
     {
-        return [PowerJoinsServiceProvider::class];
+        return [
+            BasePowerJoinsServiceProvider::class,
+            PowerJoinsServiceProvider::class
+        ];
     }
 
     /**
