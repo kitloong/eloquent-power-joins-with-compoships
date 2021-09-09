@@ -10,6 +10,8 @@ This package support composite keys for relation:
 2. HasMany
 3. belongsTo
 
+You could read the detail explanation at [here](https://kitloong.medium.com/laravel-eloquent-join-with-composite-keys-40a53a4e2dcc).
+
 ## Installation
 
 You can install the package via composer:
