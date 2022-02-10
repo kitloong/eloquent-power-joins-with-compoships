@@ -13,15 +13,17 @@ jobs:
 
     strategy:
       matrix:
-        php: [ 7.3, 7.4 ]
-        laravel: [ 6.*, 7.*, 8.* ]
-        include:
-          - laravel: 8.*
-            testbench: 6.*
+        php: [ 7.3, 7.4, 8.0, 8.1 ]
+        laravel: [ 6.*, 7.*, 8.*, 9.* ]
+        exclude:
+          - laravel: 9.*
+            php: 7.3
+          - laravel: 9.*
+            php: 7.4
           - laravel: 7.*
-            testbench: 5.*
+            php: 8.1
           - laravel: 6.*
-            testbench: 4.*
+            php: 8.1
 
     name: PHP ${{ matrix.php }} - Laravel ${{ matrix.laravel }}
 
@@ -46,13 +48,13 @@ jobs:
           php-version: ${{ matrix.php }}
           extensions: curl, mbstring, zip, pcntl, pdo, sqlite, pdo_sqlite, iconv
           coverage: none
-          tools: composer:v1
+          tools: composer:v2
 
       - name: Install dependencies
         run: |
           composer --version
-          composer require "laravel/framework:${{ matrix.laravel }}" "orchestra/testbench:${{ matrix.testbench }}" --no-interaction --no-update
-          composer update --${{ matrix.dependency-version }} --prefer-dist --no-interaction --no-suggest
+          composer require "laravel/framework:${{ matrix.laravel }}" --no-interaction --no-update
+          composer update --prefer-stable --prefer-dist --no-interaction --no-suggest
           composer dump
 
       - name: Execute tests
