@@ -20,7 +20,7 @@
         "awobaz/compoships": "^2.1"
     },
     "require-dev": {
-        "orchestra/testbench": "^4.0|^5.0|^6.0|^7.0",
+        "orchestra/testbench": "^4.0|^5.0|^6.0|^7.0|^8.0",
         "laravel/legacy-factories": "^1.1",
         "squizlabs/php_codesniffer": "^3.6"
     },
