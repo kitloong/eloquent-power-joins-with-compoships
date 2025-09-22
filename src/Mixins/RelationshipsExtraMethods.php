@@ -3,6 +3,7 @@
 namespace KitLoong\PowerJoins\Mixins;
 
 use Kirschbaum\PowerJoins\Mixins\RelationshipsExtraMethods as Base;
+use Kirschbaum\PowerJoins\StaticCache;
 
 /**
  * @method getModel
@@ -16,7 +17,7 @@ class RelationshipsExtraMethods extends Base
     {
         return function ($query, $joinType, $callback = null, $alias = null, bool $disableExtraConditions = false) {
             $joinedTable = $this->query->getModel()->getTable();
-            $parentTable = $this->getTableOrAliasForModel($this->parent, $this->parent->getTable());
+            $parentTable = StaticCache::getTableOrAliasForModel($this->parent, $this->parent->getTable());
 
             $query->{$joinType}($joinedTable, function ($join) use ($callback, $joinedTable, $parentTable, $alias, $disableExtraConditions) {
                 if ($alias) {
@@ -61,7 +62,7 @@ class RelationshipsExtraMethods extends Base
     {
         return function ($builder, $joinType, $callback = null, $alias = null, bool $disableExtraConditions = false) {
             $joinedTable = $alias ?: $this->query->getModel()->getTable();
-            $parentTable = $this->getTableOrAliasForModel($this->parent, $this->parent->getTable());
+            $parentTable = StaticCache::getTableOrAliasForModel($this->parent, $this->parent->getTable());
 
             $builder->{$joinType}($this->query->getModel()->getTable(), function ($join) use ($callback, $joinedTable, $parentTable, $alias, $disableExtraConditions) {
                 if ($alias) {

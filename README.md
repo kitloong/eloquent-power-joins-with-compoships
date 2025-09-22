@@ -22,6 +22,9 @@ composer require kitloong/eloquent-power-joins-with-compoships
 
 ## Usage
 
+### v2 breaking change
+In v2, the `use PowerJoins` is not available because [Eloquent Power Joins](https://github.com/kirschbaum-development/eloquent-power-joins) has moved the trait `PowerJoins` to `JoinRelationship` Mixin.   
+
 To implement join with composite key
 
 ```sql
@@ -36,7 +39,7 @@ use Kirschbaum\PowerJoins\PowerJoins;
 
 class User extends Model
 {
-    use PowerJoins;
+    use PowerJoins; // this is unavailable in v2
     use Compoships;
     
     public function posts()
